@@ -34,7 +34,7 @@ def instagram_webhook(request):
 
 
 def send_instagram_reply(recipient_id, message_text):
-    url = f"https://graph.facebook.com/v19.0/me/messages"
+    url = f"https://graph.facebook.com/v19.0/{recipient_id}/messages"
     params = {
         "access_token": PAGE_ACCESS_TOKEN
     }
